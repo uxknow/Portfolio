@@ -4,9 +4,9 @@ import { Container } from "../container";
 export const AboutMe = () => {
   return (
     <Container id="about-me">
-      <Balancer>
         <div className="flex flex-col gap-5">
           <h2 className="text-4xl font-semibold text-center">About Me</h2>
+          <Balancer>
           <p>
             <span className="ml-4 font-bold text-2xl">Hi!</span> My name is
             Borys and I'm a highly ambitious, self-motivated, and driven
@@ -14,6 +14,7 @@ export const AboutMe = () => {
             passionate about the world of programming and I'm looking to develop
             my skills in this field.
           </p>
+          <br/>
           <p>
             My journey into programming started not too long ago, but I've
             already managed to gain some experience and master the basic
@@ -24,6 +25,7 @@ export const AboutMe = () => {
             programming, databases, and backend and strive to continue expanding
             my knowledge and skills in these areas.
           </p>
+          <br/>
           <p>
             While studying programming, I have learned to be creative and think
             logically. I enjoy solving complex problems and finding solutions to
@@ -33,6 +35,7 @@ export const AboutMe = () => {
             on projects where I can apply my knowledge and continue my
             professional development in programming.
           </p>
+          <br/>
           <p>
             As a novice programmer, I am enthusiastic and ready to tackle new
             challenges, as well as learn and grow together with the team. I look
@@ -40,8 +43,8 @@ export const AboutMe = () => {
             for your time, and I would be happy to discuss collaboration
             opportunities.
           </p>
+          </Balancer>
         </div>
-      </Balancer>
     </Container>
   );
 };
