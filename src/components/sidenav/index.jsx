@@ -8,12 +8,12 @@ export const Sidenav = () => {
   const { hash } = useLocation();
   const isMobile = useMediaQuery("(max-width: 767px)");
   const [isShow, setIsShow] = useState(false);
-
+  //max-md:bottom-0
   return (
     <div
-      className={`fixed will-change-scroll z-10 h-screen md:pl-3 max-md:pb-5 max-md:w-full max-md:flex max-md:flex-col max-md:items-center max-md:bottom-0 ${
+      className={`fixed will-change-scroll z-10 h-screen md:pl-3 max-md:pb-5 max-md:w-full max-md:flex max-md:flex-col max-md:items-center ${
         isShow && isMobile ? "portrait:top-[90%] landscape:top-[80%]" : ""
-      } ${!isShow && isMobile ? "top-[100%]" : ""} ${
+      } ${!isShow && isMobile ? "top-full" : ""} ${
         isMobile ? "ease-in duration-300" : ""
       }`}
     >
