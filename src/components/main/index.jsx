@@ -9,7 +9,7 @@ export const Main = () => {
       id="main"
       className="w-full h-screen bg-cover bg-right bg-no-repeat bg-[url('assets/img/neom.jpg')]"
     >
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-white/40"></div>
+      <div className="absolute h-screen top-0 left-0 right-0 bottom-0 bg-white/40"></div>
       <div className="h-full w-full p-20">
         <div className="flex relative flex-col gap-4 h-full max-w-2xl m-auto justify-center max-md:items-center max-md:text-center">
           <div className="text-slate-950">
