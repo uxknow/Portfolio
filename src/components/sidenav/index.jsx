@@ -11,8 +11,10 @@ export const Sidenav = () => {
 
   return (
     <div
-      className={`${isShow && isMobile && "portrait:top-[90%] landscape:top-[80%]"} ${
-        !isShow && isMobile && "top-[100%]"
+      className={`${
+        isShow && isMobile ? "portrait:top-[90%] landscape:top-[80%]" : ""
+      } ${GIT
+        !isShow && isMobile ? "top-[100%]" : ""
       } fixed z-10 md:h-screen md:pl-3 max-md:pb-5 max-md:w-full max-md:flex max-md:flex-col max-md:items-center max-md:bottom-0 ${
         isMobile && "ease-in duration-300"
       }`}
@@ -20,7 +22,7 @@ export const Sidenav = () => {
       {isMobile && (
         <button
           className="text-blue-900 text-4xl -top-10 absolute p-1 animate-move-arrow"
-          onTouchStart={(e) => (e.preventDefault(), setIsShow((prev) => !prev))}
+          onClick={() => setIsShow((prev) => !prev)}
         >
           {isShow ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
         </button>
