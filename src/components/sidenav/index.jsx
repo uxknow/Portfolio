@@ -8,7 +8,7 @@ export const Sidenav = () => {
   const { hash } = useLocation();
   const isMobile = useMediaQuery("(max-width: 767px)");
   const [isShow, setIsShow] = useState(false);
-  //max-md:bottom-0
+
   return (
     <div
       className={`fixed z-10 md:h-screen md:pl-3 max-md:pb-5 max-md:w-full max-md:flex max-md:flex-col max-md:items-center ${
@@ -32,7 +32,7 @@ export const Sidenav = () => {
         }`}
       >
         {sideNavList.map(({ path, title, icon }) => (
-          <li key={title}>
+          <li key={title} onTouchStart={() => setIsShow(false)}>
             <a
               href={path}
               className={`flex justify-center items-center text-black text-xl bg-gray-200 shadow-lg shadow-gray-300 rounded-full w-10 h-10 cursor-pointer hover:scale-110 transition duration-300 
