@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useMediaQuery } from "../../hooks/use-media-query";
-import { scrollNext, scrollPrev, scrollDots, handleDotClick } from "../../utils/slider";
+import {
+  scrollNext,
+  scrollPrev,
+  scrollDots,
+  handleDotClick,
+} from "../../utils/slider";
 
 export const Projects = () => {
   const refImg = useRef(null);
@@ -88,7 +93,7 @@ export const Projects = () => {
           {projectsData.map(({ title, slug, img }) => (
             <li
               key={slug}
-              className="relative text-white lg:h-64 md900:h-52 md:h-44 sm:h-40  max-sm:basis-full basis-[48%] flex-shrink-0 snap-normal snap-center"
+              className="relative text-white lg:h-64 md900:h-52 md:h-44 sm:h-40  max-sm:basis-full basis-[48%] flex-shrink-0 snap-always snap-center"
             >
               <img
                 ref={refImg}
@@ -110,10 +115,7 @@ export const Projects = () => {
             </li>
           ))}
         </ul>
-        <div
-          ref={refDots}
-          className="flex justify-center gap-2 mt-3"
-        >
+        <div ref={refDots} className="flex justify-center gap-2 mt-3">
           {slideLength.map(({ slug }, idx) => (
             <span
               onClick={() =>
