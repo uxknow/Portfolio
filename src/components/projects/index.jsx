@@ -93,7 +93,9 @@ export const Projects = () => {
           {projectsData.map(({ title, slug, img }) => (
             <li
               key={slug}
-              className="relative text-white lg:h-64 md900:h-52 md:h-44 sm:h-40  max-sm:basis-full basis-[48%] flex-shrink-0 snap-always snap-center"
+              className={`relative text-white lg:h-64 md900:h-52 md:h-44 sm:h-40  max-sm:basis-full basis-[48%] flex-shrink-0 snap-always ${
+                isMobile ? "snap-center" : "snap-end"
+              }`}
             >
               <img
                 ref={refImg}
