@@ -12,8 +12,8 @@ export const Sidenav = () => {
   return (
     <div
       className={`fixed z-10 md:h-screen md:pl-3 max-md:pb-5 max-md:w-full max-md:flex max-md:flex-col max-md:items-center ${
-        isShow && isMobile ? "portrait:bottom-0 landscape:bottom-[10px]" : ""
-      } ${!isShow && isMobile ? "bottom-[-80px]" : ""} ${
+        isShow && isMobile ? "bottom-[-5px]" : ""
+      } ${!isShow && isMobile ? "bottom-[-76px]" : ""} ${
         isMobile ? "ease-in duration-300" : ""
       }`}
     >

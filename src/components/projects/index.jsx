@@ -83,7 +83,7 @@ export const Projects = () => {
           }
           ref={refContainer}
           className="flex w-full items-center mx-auto pb-2
-          gap-[4%] mt-12 scroll-smooth ease-in duration-200 overflow-x-auto snap-proximity snap-x slide-container"
+          gap-[4%] mt-12 scroll-smooth ease-in duration-200 overflow-x-auto snap-mandatory snap-x slide-container"
         >
           {projectsData.map(({ title, slug, img }) => (
             <li
