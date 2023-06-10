@@ -13,16 +13,16 @@ export const Sidenav = () => {
     <div
       className={`${
         isShow && isMobile ? "portrait:top-[90%] landscape:top-[80%]" : ""
-      } ${GIT
+      } ${
         !isShow && isMobile ? "top-[100%]" : ""
-      } fixed z-10 md:h-screen md:pl-3 max-md:pb-5 max-md:w-full max-md:flex max-md:flex-col max-md:items-center max-md:bottom-0 ${
+      } fixed z-10 h-screen md:pl-3 max-md:pb-5 max-md:w-full max-md:flex max-md:flex-col max-md:items-center max-md:bottom-0 ${
         isMobile && "ease-in duration-300"
       }`}
     >
       {isMobile && (
         <button
           className="text-blue-900 text-4xl -top-10 absolute p-1 animate-move-arrow"
-          onClick={() => setIsShow((prev) => !prev)}
+          onTouchStart={() => setIsShow((prev) => !prev)}
         >
           {isShow ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
         </button>
